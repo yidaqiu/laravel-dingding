@@ -47,9 +47,8 @@ return [
      * 钉钉的配置
      */
     'dingding' => [
-        //test
         'corpid' => 'corpid',
 
         'corpsecret' => 'corpsecret',
-        ],
+    ]
 ];
