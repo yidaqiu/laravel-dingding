@@ -24,7 +24,7 @@ Route::get('/dd', function () {
     $accessToken = $response->access_token;
 
     $req = new OapiUserGetRequest;
-    $req->setUserid("154126542935680843");
+    $req->setUserid("userid");
     $resp=$c->execute($req, $accessToken,"https://oapi.dingtalk.com/user/get");
     var_dump($resp);
 });
