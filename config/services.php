@@ -47,8 +47,13 @@ return [
      * 钉钉的配置
      */
     'dingding' => [
-        'corpid' => 'corpid',
+        //'corpid' => 'corpid',
+        //'corpsecret' => 'corpsecret',
+        'cb_token' => 'cb_token',
+        'cb_aes_key' => 'cb_aes_key',
+        'cb_url' => 'https://website/call-back-sync',
 
-        'corpsecret' => 'corpsecret',
+        'corpid' => 'ding0c9a2de8aa68c484',
+        'corpsecret' => 'zZWzUUxPgMLqMdYVpVB77Vs1Ag5W06eHPUu8_4Ti7viI7vfT7zPSRwaOcHYFwIgE',
     ]
 ];
