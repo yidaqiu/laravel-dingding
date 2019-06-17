@@ -18,12 +18,17 @@ $req->setUserid("154126542935680843");
 $resp=$c->execute($req, $accessToken,"https://oapi.dingtalk.com/user/get");
 var_dump($resp);
 ```
+所有调用钉钉SDK的示例都是在app\Http\Controllers\DingdingController.php中
 
 ## 使用钉钉业务回调事件
 钉钉官网提供的业务回调事件加密解密php7.1已经抛弃不能使用。所以我们使用openssl进行加密解密信息。    
 解密回调示例: app\Http\Controllers\DingdingController.php中callBackDecryptMsg()方法。    
 解密代码包：app\Libs\crypto  
 
+## 钉钉机器人
+1. 添加机器人。
+点击钉钉个人头像-》机器人管理-》自定义-》设置机器人名称，以及添加到的群组-》复制webhook。
+2. webhook就是你发送给钉钉机器人消息的接口，我们通过webhook接口调用机器人发消息到群里。
 
 ### 注意
 本项目只是简单介绍laravel如何更好的使用钉钉接口开发。如laravel问题和钉钉问题请参考[laravel官网文档](https://laravel.com/docs)和[钉钉开发文档](https://open-doc.dingtalk.com/microapp/serverapi2)。

@@ -83,4 +83,18 @@ class DingdingController extends Controller
         }
         exit;
     }
+
+    /**
+     * 调用机器人发消息
+     */
+    public function Robet(){
+        $accessToken = $this->getDingdingAccessToken();
+        $c = new \DingTalkClient(\DingTalkConstant::$CALL_TYPE_OAPI, \DingTalkConstant::$METHOD_POST , \DingTalkConstant::$FORMAT_JSON);
+        $req = new \OapiRobotSendRequest();
+        $req->setText( array(
+            "content" => '大家好！我是球球机器人，来撩骚啊！'
+        ));
+        $resp=$c->execute($req, $accessToken,"https://oapi.dingtalk.com/robot/send");
+        var_dump($resp);
+    }
 }
